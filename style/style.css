@@ -1,0 +1,113 @@
+/* =====================
+   GLOBAL COLOR SYSTEM
+===================== */
+:root {
+  --bg-main: #0f172a;        /* Dark navy background */
+  --card-bg: #ffffff;       /* Clean white card */
+  --primary: #0a2540;       /* Professional blue */
+  --accent: #2563eb;        /* Soft action blue */
+  --text-main: #1f2937;     /* Dark readable text */
+  --text-muted: #6b7280;    /* Muted secondary text */
+  --shadow-soft: 0 8px 20px rgba(0,0,0,0.12);
+  --shadow-hover: 0 18px 40px rgba(0,0,0,0.25);
+}
+
+/* =====================
+   PAGE BACKGROUND
+===================== */
+body {
+  background: linear-gradient(135deg, #f6f8fc, #aecaf8);
+}
+
+/* =====================
+   PROJECT CARD
+===================== */
+.project-card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* =====================
+   IMAGE
+===================== */
+.card-image img {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* =====================
+   BADGE
+===================== */
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  background: #eef2ff;
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+}
+
+/* =====================
+   CARD CONTENT
+===================== */
+.card-content {
+  padding: 1.4rem;
+}
+
+.card-content h3 {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  color: var(--text-main);
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.card-content .is-size-7 {
+  color: var(--text-muted);
+}
+
+/* =====================
+   FOOTER LINKS
+===================== */
+.card-footer {
+  border-top: 1px solid #e5e7eb;
+}
+
+.card-footer-item {
+  font-weight: 600;
+  color: var(--accent);
+  transition: background-color 0.3s ease;
+}
+
+.card-footer-item:hover {
+  background-color: #eff6ff;
+}
+
+/* =====================
+   MOBILE SAFETY
+===================== */
+@media (max-width: 768px) {
+  .project-card:hover {
+    transform: none;
+  }
+}
